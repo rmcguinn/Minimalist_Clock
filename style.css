@@ -1,0 +1,87 @@
+html {
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    height: 100%;
+    z-index: 2;
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.bg-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background: #018DED url(https://images.unsplash.com/photo-1497892597262-2983614aa886?ixlib=rb-0.3.5&s=642a314a6f1945e25692b532e9e71019);
+    background-size: cover;
+    background-position: 0px -100px;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(1.5px);
+    transform: scale(1.1);
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 4px;
+    font-size: 7rem;
+    flex: 1;
+    color: #fff;
+    margin: 230px 0px 0px;
+    z-index: 2;
+}
+
+.quickfix {
+    flex: 1.2;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -150px;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #EFEFEF, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    /* account for the height of the clock hands */
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+    height: 3px;
+}
+
+.hour-hand {
+    width: 35%;
+    left: 14%;
+}
